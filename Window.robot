@@ -1,6 +1,8 @@
 *** Settings ***
 Library  SeleniumLibrary
 
+
+
 *** Test Cases ***
 Switch window
     Open Browser  http://naukri.com  gc

@@ -1,6 +1,7 @@
 *** Variables ***
 @{a}  ten  one  two  30  400
 &{k}  a=10  b=20  c=30  d=40
+
 *** Test Cases ***
 For Loop
     :FOR  ${i}  IN RANGE  10  20  +3

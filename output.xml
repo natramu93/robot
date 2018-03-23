@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.2 (Python 3.6.4 on win32)" generated="20180323 15:02:58.208">
+<suite id="s1" name="Test" source="E:\Nice\Project1\test.robot">
+<test id="s1-t1" name="Opening Browser">
+<kw name="Append To Environment Variable" library="OperatingSystem">
+<doc>Appends given ``values`` to environment variable ``name``.</doc>
+<arguments>
+<arg>PATH</arg>
+<arg>E:\\Nice\\Project1</arg>
+</arguments>
+<msg timestamp="20180323 15:02:59.511" level="INFO">Environment variable 'PATH' set to value 'C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Java\jdk1.8.0_112\bin;C:\mvn\apache-maven-3.5.0\bin;C:\Android\sdk\platform-tools;C:\Program Files\Git\cmd;C:\Users\Natarajan Ramanathan\Downloads\apache-ant-1.10.1\bin;C:\Program Files\PuTTY\;C:\Program Files\nodejs\;C:\Program Files\Java\jdk1.8.0_144\bin;C:\Users\Natarajan Ramanathan\Anaconda3;C:\Users\Natarajan Ramanathan\Anaconda3\Library\mingw-w64\bin;C:\Users\Natarajan Ramanathan\Anaconda3\Library\usr\bin;C:\Users\Natarajan Ramanathan\Anaconda3\Library\bin;C:\Users\Natarajan Ramanathan\Anaconda3\Scripts;C:\Users\Natarajan Ramanathan\AppData\Local\Programs\Python\Python36-32\Scripts\;C:\Users\Natarajan Ramanathan\AppData\Local\Programs\Python\Python36-32\;C:\Ruby23-x64\bin;C:\Users\Natarajan Ramanathan\AppData\Local\Microsoft\WindowsApps;C:\Users\Natarajan Ramanathan\AppData\Local\GitHubDesktop\bin;C:\Users\Natarajan Ramanathan\AppData\Roaming\npm;C:\Users\Natarajan Ramanathan\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Microsoft VS Code\bin;E:\Nice\Project1'.</msg>
+<status status="PASS" starttime="20180323 15:02:59.511" endtime="20180323 15:02:59.511"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>http://google.com</arg>
+<arg>gc</arg>
+</arguments>
+<msg timestamp="20180323 15:02:59.512" level="INFO">Opening browser 'gc' to base url 'http://google.com'.</msg>
+<status status="PASS" starttime="20180323 15:02:59.512" endtime="20180323 15:03:11.116"></status>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<doc>Returns the current browser URL.</doc>
+<assign>
+<var>${url}</var>
+</assign>
+<msg timestamp="20180323 15:03:11.143" level="INFO">${url} = https://www.google.co.in/?gfe_rd=cr&amp;dcr=0&amp;ei=18m0WuHeLsucX7Dum-AG&amp;gws_rd=ssl</msg>
+<status status="PASS" starttime="20180323 15:03:11.127" endtime="20180323 15:03:11.143"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>https://www.google.co.in/?gfe_rd=cr&amp;dcr=0&amp;ei=4w2yWuOsNvPy8AeIy</arg>
+</arguments>
+<msg timestamp="20180323 15:03:11.145" level="FAIL">https://www.google.co.in/?gfe_rd=cr&amp;dcr=0&amp;ei=18m0WuHeLsucX7Dum-AG&amp;gws_rd=ssl != https://www.google.co.in/?gfe_rd=cr&amp;dcr=0&amp;ei=4w2yWuOsNvPy8AeIy</msg>
+<status status="FAIL" starttime="20180323 15:03:11.144" endtime="20180323 15:03:11.146"></status>
+</kw>
+<status status="FAIL" starttime="20180323 15:02:59.510" endtime="20180323 15:03:11.147" critical="yes">https://www.google.co.in/?gfe_rd=cr&amp;dcr=0&amp;ei=18m0WuHeLsucX7Dum-AG&amp;gws_rd=ssl != https://www.google.co.in/?gfe_rd=cr&amp;dcr=0&amp;ei=4w2yWuOsNvPy8AeIy</status>
+</test>
+<status status="FAIL" starttime="20180323 15:02:58.215" endtime="20180323 15:03:11.151"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="Test">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
